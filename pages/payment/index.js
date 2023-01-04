@@ -64,9 +64,16 @@ export default function PaymentScreen() {
           >
             Back
           </button>
-          <button className="primary-button">Next</button>
+          <button
+            className="primary-button"
+            onClick={()=>router.push('/placeorder')}
+          >
+            Next
+          </button>
         </div>
       </form>
     </Layout>
   )
 }
+
+PaymentScreen.auth = true;
