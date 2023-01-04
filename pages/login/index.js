@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
-import {getError} from '../../utils/error';
+import { getError } from '../../utils/error';
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -85,7 +85,9 @@ export default function LoginScreen() {
 
         <div className="mb-4 ">
           Don&apos;t have an account? &nbsp;
-          <Link href="register">Register</Link>
+          <Link href={`/register?redirect=${redirect || '/'}`}>
+            Register
+          </Link>
         </div>
       </form>
     </Layout>
