@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useRouter } from 'next/router';
-import { Store } from '../utils/Store';
-import Layout from '../components/Layout';
+import { Store } from '../../utils/Store';
+import Layout from '../../components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
