@@ -18,8 +18,6 @@ export default function ShippingScreen() {
   const { cart } = state;
   const { shippingAddress } = cart;
   const router = useRouter();
-  
-  console.log(shippingAddress);
 
   useEffect(() => {
     setValue('fullName', shippingAddress?.fullName);
