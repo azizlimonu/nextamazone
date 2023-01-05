@@ -46,7 +46,7 @@ const reducer = (state, action) => {
   }
 }
 
-function AdminDashboardScreen() {
+export default function AdminDashboardScreen() {
   const [{ loading, error, summary }, dispatch] = useReducer(reducer, {
     loading: true,
     summary: { salesData: [] },
@@ -59,6 +59,7 @@ function AdminDashboardScreen() {
         dispatch({ type: 'FETCH_REQUEST' });
         const { data } = await axios.get(`/api/admin/summary`);
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
+        console.log(data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
@@ -144,4 +145,3 @@ function AdminDashboardScreen() {
 }
 
 AdminDashboardScreen.auth = { adminOnly: true };
-export default AdminDashboardScreen;
