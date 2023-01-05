@@ -111,7 +111,7 @@ export default function ProfileScreen() {
               validate: (value) => value === getValues('password'),
               minLength: {
                 value: 6,
-                message: 'confirm password is more than 5 chars',
+                message: 'confirm password is more than 5 characters',
               },
             })}
           />

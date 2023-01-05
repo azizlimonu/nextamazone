@@ -71,6 +71,14 @@ export default function Layout({ title, children }) {
                           </Link>
                         </Menu.Item>
 
+                        {session.user.isAdmin && (
+                          <Menu.Item>
+                            <Link href='/admin/dashboard' className='dropdown-link'>
+                              Admin Dashboard
+                            </Link>
+                          </Menu.Item>
+                        )}
+
                         <Menu.Item>
                           <a
                             className="dropdown-link"
