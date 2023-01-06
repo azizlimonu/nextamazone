@@ -3,10 +3,12 @@ import Cookies from 'js-cookie';
 import { signOut, useSession } from 'next-auth/react';
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import React, { useContext, useEffect, useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Store } from '../utils/Store';
+import { BiSearchAlt } from 'react-icons/bi';
 // import DropDown from './DropDown';
 
 export default function Layout({ title, children }) {
@@ -26,6 +28,15 @@ export default function Layout({ title, children }) {
   };
 
   const isCart = cartItemsCount > 0;
+
+  const [query, setQuery] = useState('');
+
+  const router = useRouter();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    router.push(`/search?query=${query}`);
+  };
+
   return (
     <>
       <div>
@@ -43,6 +54,26 @@ export default function Layout({ title, children }) {
               <Link className="text-lg font-bold" href="/">
                 Amazonas
               </Link>
+
+              <form
+                onSubmit={submitHandler}
+                className="mx-auto  hidden w-full justify-center md:flex"
+              >
+                <input
+                  type="text"
+                  placeholder="Search products"
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="rounded-tr-none rounded-br-none p-1 text-sm   focus:ring-0"
+                />
+                <button
+                  className="rounded rounded-tl-none rounded-bl-none bg-amber-300 p-1 text-sm dark:text-black"
+                  type="submit"
+                  id="button-addon2"
+                >
+                  <BiSearchAlt className="h-5 w-5" />
+                </button>
+              </form>
+
               <div>
                 <Link className="p-2" href="/cart">
                   Cart
