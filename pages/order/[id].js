@@ -170,6 +170,8 @@ export default function OrderScreen() {
     }
   }
 
+  console.log('order items slug', orderItems);
+
   return (
     <Layout title={`Order ${orderId}`}>
       <h1 className="mb-4 text-xl">{`Order ${orderId}`}</h1>
