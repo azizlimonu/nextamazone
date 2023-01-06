@@ -6,7 +6,7 @@ export default function ProductItem({ product, addCartHandler }) {
   return (
     <div className='card'>
       <Link href={`/product/${product.slug}`}>
-        <img src={product.image} alt={product.name} className='rounded shadow' />
+        <img src={product.image} alt={product.name} className='rounded shadow h-64 w-full' />
       </Link>
 
       <div className='flex flex-col items-center justify-center p-5'>
