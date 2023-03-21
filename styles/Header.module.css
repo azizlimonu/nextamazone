@@ -1,0 +1,298 @@
+.header {
+  /* font-family: Poppins, sans-serif; */
+  letter-spacing: -0.025em;
+  background: #fff;
+}
+.headerTop {
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 1.2rem;
+  letter-spacing: -0.025em;
+  color: #666;
+  height: 40px;
+}
+
+.headerTop,
+.headerMiddle,
+.headerBottom {
+  display: flex;
+}
+
+.container,
+.containerFluid,
+.inner-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1220px;
+}
+
+.container,
+.containerFluid {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft {
+  flex: 1 1;
+}
+
+.headerLeft p {
+  margin: 0;
+  padding: 1.1rem 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  letter-spacing: -0.0125em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.headerRight {
+  margin-left: auto;
+}
+
+.headerTop .headerRight > :first-child {
+  margin-left: 0;
+}
+
+.headerTop .headerRight > * {
+  margin-left: 2rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropTittle {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dropTittle:hover + .dropdownBox {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
+}
+
+.dropdownBox:hover {
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
+}
+
+.dropdown > a {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  padding: 9px 0;
+}
+
+.headerRight a {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown > p::after {
+  line-height: 1;
+  display: inline-block;
+  margin-left: 8px;
+  line-height: 1;
+  padding: 9px 0;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.dropdownBox {
+  position: absolute;
+  right: 0;
+  top: -9999px;
+  margin-top: 5px;
+  padding: 0.5rem;
+  color: #666;
+  background-color: #fff;
+  box-shadow: 0 10px 30px 2px rgb(0 0 0 / 20%);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, -10px, 0);
+  list-style-type: none;
+}
+
+.divider {
+  margin: 0 -0.8rem 0 1rem !important;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.5rem;
+  height: 1.8rem;
+  width: 1px;
+  background-color: #e1e1e1;
+}
+
+.delimiter {
+  margin: 0 0.5rem !important;
+  color: #aaa;
+}
+
+.iconHeader {
+  font-size: 1.2rem;
+}
+
+.dropTittle:hover {
+  color: rgb(23, 96, 207);
+}
+
+.toggleMobile {
+  display: none;
+  margin-right: 2rem;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.headerMiddle {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  color: #222;
+  background: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.logo {
+  margin-right: 3.3rem;
+  margin-bottom: 0.1rem;
+  max-width: 200px;
+  font-size: 30px;
+  font-weight: 800;
+  color: rgb(27, 26, 26);
+}
+
+.headerSearch {
+  flex: 1 1;
+  margin-right: 2rem;
+  max-width: 52.2rem;
+  position: relative;
+}
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  max-width: 522px;
+}
+
+.inputfield {
+  padding: 0 5rem 0 1.55rem;
+  border-radius: 5px;
+  border: 2px solid #26c;
+  font-family: inherit;
+  background-color: #fff;
+  color: #999;
+  flex: 1 1;
+  min-width: 40px;
+  font-size: 1rem;
+  letter-spacing: inherit;
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  line-height: 1.5;
+  font-weight: 400;
+  box-shadow: none;
+  outline: none;
+}
+
+.btnsearch {
+  position: absolute;
+  background: transparent;
+  color: #333;
+  min-width: 48px;
+  height: 100%;
+  border-radius: 5px;
+  right: 0;
+  padding: 0;
+  border: 0;
+  font-size: 2rem;
+}
+
+.call,
+.shopping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  padding-bottom: 0.1rem;
+  margin-right: 1.8rem;
+  padding-bottom: 0.1rem;
+}
+
+.dividermiddle {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.5rem;
+  height: 2.5rem;
+  width: 1px;
+  background-color: #e1e1e1;
+}
+
+.wishlist {
+  margin-right: 1.5rem;
+}
+
+.middleicon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.iconwishlist {
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  margin-right: 1rem;
+}
+
+.call:hover,
+.iconwishlist:hover,
+.shopping:hover {
+  color: #26c;
+  cursor: pointer;
+}
+
+.call,
+.iconwishlist,
+.shopping {
+  color: #333;
+}
+.shopping {
+  margin-right: 0 !important;
+}
+
+.shopicon {
+  font-size: 1.5rem;
+}
+/* .call >div,
+.shopping >div{
+  display: none;
+} */
+
+.headerBottom{
+  padding-bottom: 1.5rem;
+  color: #222;
+  background: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
